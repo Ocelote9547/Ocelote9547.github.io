@@ -132,3 +132,23 @@
 @media(prefers-reduced-motion:reduce){
  .feature-grid article,.card-explore span{transition:none!important}
 }
+
+
+/* Galerías reales: horizontal para escritorio, vertical para apps móviles */
+.screenshot-grid{align-items:start}
+.screenshot-card{margin:0;min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#0b111a}
+.screenshot-card>img{display:block;width:100%;height:auto;object-fit:contain;background:#080d14}
+.screenshot-card figcaption{padding:10px 12px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:1.2px}
+.screenshot-card .screenshot-placeholder{aspect-ratio:9/16;border:0;border-radius:0;min-height:220px}
+.app-launcher .screenshot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.app-launcher .screenshot-card>img{aspect-ratio:16/9;object-fit:contain}
+.app-launcher .screenshot-card .screenshot-placeholder{aspect-ratio:16/9;min-height:0}
+.app-party .screenshot-card>img,.app-nexo .screenshot-card>img{aspect-ratio:9/16;object-fit:contain}
+@media(max-width:760px){
+ .app-launcher .screenshot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .app-launcher .screenshot-card figcaption,.app-party .screenshot-card figcaption,.app-nexo .screenshot-card figcaption{padding:8px;font-size:9px}
+}
+@media(max-width:480px){
+ .app-launcher .screenshot-grid{grid-template-columns:1fr}
+ .app-launcher .screenshot-card>img{aspect-ratio:16/9}
+}
