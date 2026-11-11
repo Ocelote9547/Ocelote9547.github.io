@@ -14,3 +14,68 @@
 .faq-list details p{margin:0;padding:0 4px 18px;color:var(--muted);font-size:12px;line-height:1.8;max-width:850px}
 .faq-list code{color:var(--accent2);font-size:11px}
 .legal-note{padding-bottom:35px;color:#778598;font-size:10px;line-height:1.7}
+
+
+/* Pulido responsive común de todas las fichas */
+.product-header{gap:12px}
+.product-hero-copy,.product-hero,.product-section,.download-panel{min-width:0}
+.product-title-row{min-width:0}
+.product-title-row>div{min-width:0}
+.product-title-row h1{overflow-wrap:anywhere}
+.feature-grid article{min-width:0}
+.spec-grid b{overflow-wrap:anywhere}
+.faq-list summary{line-height:1.5}
+.download-button{transition:filter .2s,transform .2s}
+@media(max-width:760px){
+ .wrap{width:calc(100% - 38px)}
+ .product-header{width:calc(100% - 38px);height:68px}
+ .product-hero{padding-top:42px;padding-bottom:35px;gap:6px}
+ .product-title-row{margin:19px 0;gap:14px}
+ .product-title-row h1{font-size:clamp(38px,9vw,54px);letter-spacing:-2px}
+ .app-icon{width:76px;height:76px;border-radius:18px}
+ .lead{font-size:14px;line-height:1.8}
+ .hero-pills{gap:6px;margin:17px 0}
+ .hero-pills span{font-size:9px}
+ .hero-showcase{min-height:190px}
+ .showcase-icon{width:145px}
+ .product-section{padding-top:56px;padding-bottom:58px}
+ .product-section h2,.screens-section h2,.download-panel h2{font-size:clamp(29px,7.5vw,39px);letter-spacing:-1.2px}
+ .feature-grid{gap:10px}
+ .feature-grid article{padding:18px;min-height:0}
+ .feature-grid h3{font-size:15px}
+ .feature-grid p{font-size:11px}
+ .screens-section{padding:54px 0}
+ .screenshot-grid{gap:10px}
+ .spec-grid div{min-width:0;padding:14px}
+ .spec-grid b{font-size:12px}
+ .download-section{padding-bottom:55px}
+ .download-panel{padding:25px}
+ .product-footer{padding:19px;width:100%}
+}
+@media(max-width:480px){
+ .wrap{width:calc(100% - 32px)}
+ .product-header{width:calc(100% - 32px);height:64px}
+ .back-brand{font-size:10px;gap:7px;letter-spacing:1.3px}
+ .back-brand img{width:32px;height:32px}
+ .back-link{font-size:10px;white-space:nowrap}
+ .product-hero{padding-top:34px}
+ .product-title-row{gap:11px}
+ .app-icon{width:64px;height:64px;border-radius:15px}
+ .product-title-row h1{font-size:clamp(34px,9vw,45px);letter-spacing:-1.5px}
+ .tagline{font-size:11px;line-height:1.4}
+ .lead{font-size:13px}
+ .download-button{width:100%;justify-content:space-between;padding:13px 15px}
+ .feature-grid{grid-template-columns:1fr}
+ .feature-grid article{padding:17px}
+ .screenshot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .screenshot-placeholder{min-width:0;aspect-ratio:3/5}
+ .spec-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .spec-grid div{padding:12px 10px}
+ .spec-grid div:nth-child(3n){border-right:1px solid var(--line)}
+ .spec-grid div:nth-child(2n){border-right:0}
+ .spec-grid div:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
+ .spec-grid div:nth-last-child(-n+2){border-bottom:0}
+ .download-panel{padding:21px}
+ .coming-soon{white-space:normal;line-height:1.5}
+ .product-footer{font-size:10px}
+}
