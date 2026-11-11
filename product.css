@@ -152,3 +152,29 @@
  .app-launcher .screenshot-grid{grid-template-columns:1fr}
  .app-launcher .screenshot-card>img{aspect-ratio:16/9}
 }
+
+
+/* Corrección de galerías: el atributo hidden debe prevalecer sobre el display de los componentes */
+.screenshot-card [hidden]{
+  display:none!important;
+}
+
+/* Más espacio útil para las capturas en monitores grandes (incluidos 32 pulgadas) */
+@media(min-width:1600px){
+  .screens-section>.wrap{
+    width:min(1500px,calc(100% - 96px));
+  }
+  .screenshot-grid{
+    gap:22px;
+  }
+  .screenshot-card{
+    border-radius:16px;
+  }
+  .screenshot-card figcaption{
+    padding:12px 15px;
+    font-size:11px;
+  }
+  .app-launcher .screenshot-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
