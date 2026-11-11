@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090812">
-  <meta name="description" content="N3mesis Studio: ideas que se convierten en aplicaciones. Descubre nuestros proyectos y herramientas digitales.">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="N3mesis Studio crea aplicaciones útiles, cuidadas y accesibles. Descubre Party, Nexo y nuestros próximos proyectos.">
+  <meta property="og:title" content="N3mesis Studio — Ideas que se convierten en aplicaciones">
+  <meta property="og:description" content="Aplicaciones independientes diseñadas con intención. Conoce nuestros proyectos.">
+  <meta property="og:type" content="website">
   <title>N3mesis Studio — Ideas que se convierten en aplicaciones</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,62 +17,133 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="N3mesis Studio, inicio">
       <span class="brand-mark">N<span>3</span></span>
       <span class="brand-name">N3MESIS<small>STUDIO</small></span>
     </a>
-    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
-    <nav class="nav">
-      <a href="#proyectos">Proyectos</a><a href="#estudio">El estudio</a><a href="#proceso">Proceso</a><a href="#contacto" class="nav-cta">Contacto <span>↗</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    <nav class="nav" id="main-nav">
+      <a href="#proyectos">Aplicaciones</a>
+      <a href="#estudio">El estudio</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#contacto" class="nav-cta">Contacto <span>↗</span></a>
     </nav>
   </header>
 
   <main>
     <section class="hero section-wrap" id="inicio">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse"></span> ESTUDIO DE DESARROLLO INDEPENDIENTE</div>
+        <div class="eyebrow"><span class="pulse"></span> ESTUDIO INDEPENDIENTE DE DESARROLLO</div>
         <h1>Ideas que se convierten en <span class="gradient-text">aplicaciones.</span></h1>
-        <p class="hero-lead">Diseñamos y desarrollamos herramientas digitales con una misión: hacer que la tecnología sea útil, sencilla y accesible.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#proyectos">Explorar proyectos <span>↘</span></a><a class="text-link" href="#estudio">Conoce el estudio <span>→</span></a></div>
-        <div class="hero-meta"><span class="meta-line"></span><span>CREATIVIDAD · CÓDIGO · PROPÓSITO</span></div>
+        <p class="hero-lead">Creamos herramientas digitales con personalidad, pensadas para ser útiles, sencillas y agradables de utilizar.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#proyectos">Descubrir aplicaciones <span>↘</span></a>
+          <a class="text-link" href="#estudio">Conoce N3mesis <span>→</span></a>
+        </div>
+        <div class="hero-meta"><span class="meta-line"></span><span>IDEAS CLARAS · CÓDIGO CUIDADO · PRODUCTOS ÚTILES</span></div>
       </div>
-      <div class="hero-art" aria-label="Ilustración abstracta de tecnología">
+      <div class="hero-art" aria-label="Identidad visual de N3mesis Studio">
+        <div class="hero-grid"></div>
         <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
-        <div class="core"><div class="core-inner">N<span>3</span></div><div class="core-caption">BUILDING<br>WHAT'S NEXT</div></div>
+        <div class="core"><div class="core-inner">N<span>3</span></div><div class="core-caption">N3MESIS<br>STUDIO</div></div>
         <span class="spark spark-a">✳</span><span class="spark spark-b">✦</span><span class="spark spark-c">·</span>
         <div class="floating-chip chip-top"><i></i> IDEA → PRODUCTO</div>
-        <div class="floating-chip chip-bottom">DIGITAL CRAFT <b>✳</b></div>
+        <div class="floating-chip chip-bottom">MADE WITH PURPOSE <b>✦</b></div>
       </div>
-      <a class="scroll-cue" href="#proyectos"><span></span> DESLIZA PARA DESCUBRIR</a>
+      <a class="scroll-cue" href="#proyectos"><span></span> DESCUBRE LOS PROYECTOS</a>
     </section>
 
     <section class="projects section-wrap section" id="proyectos">
       <div class="section-heading">
-        <div><div class="eyebrow">01 / LO QUE ESTAMOS CREANDO</div><h2>Proyectos <span class="gradient-text">con propósito.</span></h2></div>
-        <p>Un pequeño ecosistema de aplicaciones, cada una creada para resolver algo concreto.</p>
+        <div><div class="eyebrow">01 / NUESTRO TRABAJO</div><h2>Aplicaciones con <span class="gradient-text">identidad propia.</span></h2></div>
+        <p>Cada proyecto tiene su propósito, su estilo y una experiencia diseñada para lo que necesita resolver.</p>
       </div>
+
       <div class="project-grid">
-        <article class="project-card project-featured">
-          <div class="project-visual visual-nexo"><div class="visual-glow"></div><div class="app-symbol"><span class="symbol-ring">N</span></div><span class="visual-label">CONECTA LO IMPORTANTE</span><span class="visual-orbit"></span></div>
-          <div class="project-info"><div class="project-topline"><span class="project-type">PRODUCTIVIDAD · ANDROID</span><span class="status status-progress">EN DESARROLLO</span></div><h3>Nexo</h3><p>Una agenda local de contactos pensada para mantener tu información organizada y a mano.</p><div class="project-links"><a class="small-link" href="https://github.com/Ocelote9547/nexo" target="_blank" rel="noopener">Ver repositorio <span>↗</span></a><span class="muted-note">Descarga próximamente</span></div></div>
+        <article class="project-card project-party">
+          <div class="project-visual visual-party" role="img" aria-label="Ilustración de la identidad naranja de Party">
+            <div class="party-halo"></div><div class="party-orb orb-one"></div><div class="party-orb orb-two"></div><div class="party-orb orb-three"></div>
+            <div class="party-word">PARTY<span>!</span></div>
+            <span class="visual-label">JUEGOS · PLANES · MOMENTOS</span>
+            <span class="visual-sticker">LET'S PLAY</span>
+          </div>
+          <div class="project-info">
+            <div class="project-topline"><span class="project-type">ENTRETENIMIENTO · MULTIPLATAFORMA</span><span class="status status-ready">PROYECTO TERMINADO</span></div>
+            <h3>Party</h3>
+            <p class="project-description">Todo lo que necesitas para animar una quedada: más de 14 juegos para grupos, una cámara de aire retro y un creador inteligente de planes para descubrir qué hacer.</p>
+            <div class="feature-chips"><span>14+ juegos</span><span>Cámara retro</span><span>Planes inteligentes</span><span>Sin anuncios</span></div>
+            <details class="feature-details">
+              <summary>Descubrir funciones <span>＋</span></summary>
+              <div class="details-content">
+                <div><h4>Juegos para compartir</h4><p>Tabú, ¿Quién soy?, Adivina, Impostor, Dibuja y adivina, Debate, Mímica, Pueblo duerme, Yo nunca y muchos más modos para jugar en grupo.</p></div>
+                <div><h4>Cámara retro</h4><p>Filtros con carácter, efecto de grano, acabado HDR y sello de fecha para dar a tus fotos un toque inspirado en la fotografía analógica.</p></div>
+                <div><h4>Creador de planes</h4><p>Encuentra propuestas según la ubicación, el momento del día, la distancia y el transporte. Tiene en cuenta información de lugares, rutas, meteorología y horarios para ayudarte a elegir.</p></div>
+                <div><h4>Avatares y personalización</h4><p>Consigue monedas jugando, personaliza tu avatar y explora elementos visuales para dar personalidad a tus partidas.</p></div>
+              </div>
+            </details>
+            <div class="project-links"><span class="muted-note">Disponible como proyecto finalizado · Enlaces de descarga en preparación</span></div>
+          </div>
         </article>
-        <article class="project-card">
-          <div class="project-visual visual-party"><div class="party-orb orb-one"></div><div class="party-orb orb-two"></div><div class="party-orb orb-three"></div><div class="party-word">PARTY<span>!</span></div><span class="visual-label">QUE EMPIECE EL MOMENTO</span></div>
-          <div class="project-info"><div class="project-topline"><span class="project-type">APLICACIÓN</span><span class="status status-ready">PROYECTO TERMINADO</span></div><h3>Party</h3><p>Una aplicación del catálogo de N3mesis Studio. Pronto encontrarás aquí sus detalles y acceso.</p><div class="project-links"><span class="muted-note">Página y descarga pendientes de publicar</span></div></div>
+
+        <article class="project-card project-nexo">
+          <div class="project-visual visual-nexo" role="img" aria-label="Ilustración de la identidad azul de Nexo">
+            <div class="nexo-glow"></div><div class="nexo-frame"><div class="nexo-symbol">N</div><div class="nexo-lines"><i></i><i></i><i></i></div></div>
+            <span class="visual-label">TU AGENDA, BAJO TU CONTROL</span>
+            <span class="nexo-orbit"></span>
+          </div>
+          <div class="project-info">
+            <div class="project-topline"><span class="project-type">PRODUCTIVIDAD · ANDROID</span><span class="status status-progress">EN DESARROLLO</span></div>
+            <h3>Nexo</h3>
+            <p class="project-description">Tu gestor personal de contactos, privado y sencillo. Organiza tu agenda, guarda los detalles importantes y mantén tus datos bajo tu control.</p>
+            <div class="feature-chips"><span>Privacidad local</span><span>Importar y exportar</span><span>Etiquetas</span><span>Copias de seguridad</span></div>
+            <details class="feature-details">
+              <summary>Descubrir funciones <span>＋</span></summary>
+              <div class="details-content">
+                <div><h4>Contactos completos</h4><p>Guarda teléfonos, correos, direcciones, organizaciones, redes sociales, notas, cumpleaños y fotografías para cada persona.</p></div>
+                <div><h4>Tu forma de organizarte</h4><p>Agrupa contactos con etiquetas y colecciones, y encuentra cualquier dato con la búsqueda rápida.</p></div>
+                <div><h4>Importación y exportación</h4><p>Importa y exporta tu agenda mediante archivos vCard (VCF), CSV y JSON para facilitar las copias o el cambio de dispositivo.</p></div>
+                <div><h4>Privacidad y control</h4><p>No necesitas crear una cuenta. La agenda y las fotografías se almacenan en el dispositivo, sin sincronización con una nube externa. También puedes crear y restaurar copias de seguridad.</p></div>
+                <div><h4>Fechas importantes</h4><p>Registra cumpleaños y configura avisos para recordar las fechas que no quieres pasar por alto.</p></div>
+              </div>
+            </details>
+            <div class="project-links"><a class="small-link" href="https://github.com/Ocelote9547/nexo" target="_blank" rel="noopener">Ver repositorio <span>↗</span></a><span class="muted-note">Versión 1.0 en desarrollo</span></div>
+          </div>
         </article>
-        <article class="project-card">
-          <div class="project-visual visual-utils"><div class="utils-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="utils-lines"><b></b><b></b><b></b></div><div class="utils-tile">✣</div></div><span class="visual-label">PEQUEÑAS HERRAMIENTAS, GRANDES AYUDAS</span></div>
-          <div class="project-info"><div class="project-topline"><span class="project-type">UTILIDADES</span><span class="status status-concept">PROTOTIPO</span></div><h3>Utils</h3><p>Un conjunto de utilidades en fase de concepto, pensado para simplificar tareas del día a día.</p><div class="project-links"><span class="muted-note">En fase de prototipo</span></div></div>
+
+        <article class="project-card project-utils">
+          <div class="project-visual visual-utils" role="img" aria-label="Ilustración gris neutra para Utils">
+            <div class="utils-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="utils-lines"><b></b><b></b><b></b></div><div class="utils-tile">✣</div></div>
+            <span class="visual-label">UN ESPACIO PARA NUEVAS IDEAS</span>
+          </div>
+          <div class="project-info">
+            <div class="project-topline"><span class="project-type">UTILIDADES</span><span class="status status-concept">PROTOTIPO</span></div>
+            <h3>Utils</h3>
+            <p class="project-description">Un proyecto en fase de concepto. Un espacio para reunir pequeñas herramientas que puedan hacer más sencillas las tareas cotidianas.</p>
+            <div class="feature-chips"><span>En exploración</span><span>Diseño por definir</span></div>
+            <div class="project-links"><span class="muted-note">Más información próximamente</span></div>
+          </div>
         </article>
       </div>
-      <p class="section-footnote">Los estados y enlaces se actualizarán a medida que cada proyecto esté disponible públicamente.</p>
+      <p class="section-footnote">Las capturas e imágenes definitivas de cada aplicación se incorporarán cuando estén preparadas.</p>
     </section>
 
     <section class="about section" id="estudio"><div class="section-wrap about-layout">
       <div class="about-mark"><div class="about-monogram">N<span>3</span></div><div class="about-ring"></div><span class="about-caption">INDEPENDENT<br>BY DESIGN</span></div>
-      <div class="about-copy"><div class="eyebrow">02 / QUIÉNES SOMOS</div><h2>La tecnología debe <span class="gradient-text">tener sentido.</span></h2><p>N3mesis Studio es un estudio independiente centrado en crear aplicaciones y herramientas digitales. Nos mueve la curiosidad, el aprendizaje continuo y la idea de que un buen producto empieza por entender a quien lo necesita.</p><p>Trabajamos con atención al detalle, buscando experiencias claras, útiles y cuidadas desde la primera pantalla.</p><div class="values"><div><b>01</b><span>UTILIDAD<br><small>Resolver problemas reales.</small></span></div><div><b>02</b><span>SIMPLICIDAD<br><small>Menos ruido, más claridad.</small></span></div><div><b>03</b><span>EVOLUCIÓN<br><small>Mejorar en cada versión.</small></span></div></div></div>
+      <div class="about-copy">
+        <div class="eyebrow">02 / EL ESTUDIO</div>
+        <h2>La tecnología debe <span class="gradient-text">tener sentido.</span></h2>
+        <p>N3mesis Studio es un estudio independiente centrado en crear aplicaciones y herramientas digitales. Nos mueve la curiosidad, el aprendizaje continuo y la idea de que un buen producto empieza por entender a quien lo necesita.</p>
+        <p>Desde la primera idea hasta los últimos detalles, buscamos experiencias claras, útiles y cuidadas. Cada aplicación tiene su propia personalidad, pero todas comparten la misma atención por el producto.</p>
+        <div class="values">
+          <div><b>01</b><span>UTILIDAD<br><small>Resolver necesidades reales.</small></span></div>
+          <div><b>02</b><span>CLARIDAD<br><small>Experiencias fáciles de entender.</small></span></div>
+          <div><b>03</b><span>EVOLUCIÓN<br><small>Aprender y mejorar en cada versión.</small></span></div>
+        </div>
+      </div>
     </div></section>
 
     <section class="process section-wrap section" id="proceso">
@@ -83,7 +157,7 @@
     </section>
 
     <section class="contact section-wrap section" id="contacto">
-      <div class="contact-panel"><div class="contact-decoration">N<span>3</span></div><div class="eyebrow">04 / HABLEMOS</div><h2>Todo proyecto<br>empieza con una <span class="gradient-text">idea.</span></h2><p>¿Tienes una pregunta o quieres conocer más sobre N3mesis Studio? Puedes visitar nuestro perfil de GitHub.</p><a class="button button-primary" href="https://github.com/Ocelote9547" target="_blank" rel="noopener">Visitar GitHub <span>↗</span></a></div>
+      <div class="contact-panel"><div class="contact-decoration">N<span>3</span></div><div class="eyebrow">04 / CONTACTO</div><h2>Las buenas ideas<br>merecen <span class="gradient-text">hacerse realidad.</span></h2><p>¿Quieres conocer más sobre nuestros proyectos o seguir su desarrollo? Encuentra N3mesis Studio en GitHub.</p><a class="button button-primary" href="https://github.com/Ocelote9547" target="_blank" rel="noopener">Visitar GitHub <span>↗</span></a></div>
     </section>
   </main>
 
