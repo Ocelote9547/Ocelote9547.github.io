@@ -301,3 +301,15 @@ a.project-card .project-visual{flex-shrink:0}
 .connect-pc i:nth-child(2){width:62%}.connect-pc i:nth-child(3){width:72%}
 .project-connect .project-info h3{color:#eaf8ff}
 @media(max-width:600px){.connect-devices{transform:scale(.9)}}
+
+
+/* N3mesis Circle — tarjeta conceptual */
+.visual-circle{background:radial-gradient(ellipse at 50% 48%,#42316e,#1c1837 63%,#100f20)}
+.circle-rings{position:absolute;border:1px solid #bca4ff55;border-radius:50%}
+.circle-rings-one{width:235px;height:115px;transform:rotate(28deg)}
+.circle-rings-two{width:185px;height:185px;border-style:dashed;opacity:.7}
+.circle-nodes{position:relative;width:190px;height:130px;z-index:1;display:grid;place-items:center}
+.circle-core{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(145deg,#8e7bda,#53449a);border:1px solid #d9ceff;box-shadow:0 0 35px #a68cff66;color:white;font-size:28px;font-weight:800}
+.circle-node{position:absolute;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#302952;border:1px solid #bca4ff;color:#e6dcff;font-size:13px;font-style:normal;box-shadow:0 0 18px #a68cff44}
+.node-a{top:2px;left:25px}.node-b{top:12px;right:17px}.node-c{bottom:3px;left:39px}.node-d{bottom:5px;right:33px}
+.project-circle .project-info h3{color:#eee9ff}
