@@ -313,3 +313,38 @@ a.project-card .project-visual{flex-shrink:0}
 .circle-node{position:absolute;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#302952;border:1px solid #bca4ff;color:#e6dcff;font-size:13px;font-style:normal;box-shadow:0 0 18px #a68cff44}
 .node-a{top:2px;left:25px}.node-b{top:12px;right:17px}.node-c{bottom:3px;left:39px}.node-d{bottom:5px;right:33px}
 .project-circle .project-info h3{color:#eee9ff}
+
+
+/* Portadas de proyecto: composiciones únicas y micro-etiquetas */
+.project-visual .visual-sticker{z-index:3;top:17px;right:17px;border-radius:4px;padding:5px 8px;font-size:8px;letter-spacing:1px;transform:rotate(5deg);font-weight:700;backdrop-filter:blur(7px)}
+.visual-party .visual-sticker{border-color:#ff9b5a75;color:#ffd0a7;background:#25130fd9}
+.visual-nexo{background:radial-gradient(ellipse at 28% 52%,#1b4d7b 0%,#10243a 43%,#0b121d 78%)}
+.nexo-glow{left:22%;top:18%;width:170px;height:170px}
+.nexo-orbit{width:220px;height:135px;transform:rotate(-42deg);border-color:#6eafe866;border-style:dashed}
+.nexo-logo-plaque{transform:translateY(-2px);box-shadow:0 16px 48px #0007,12px 12px 0 -5px #102c49,24px 24px 0 -10px #0e2238,0 0 42px #168ce833}
+.nexo-sticker{border-color:#6bb7f477;color:#bfe4ff;background:#0c1d30dc}
+.visual-utils .visual-sticker{border-color:#aeb7c066;color:#e0e4e9;background:#202832e8}
+.visual-launcher{background:radial-gradient(ellipse at 50% 48%,#263f70 0%,#17243e 48%,#0b121d 82%);isolation:isolate}
+.visual-launcher:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 47%,#8db5ff18 48%,transparent 49%),linear-gradient(45deg,transparent 47%,#8db5ff12 48%,transparent 49%);background-size:34px 34px;mask-image:radial-gradient(ellipse at center,#000 10%,transparent 76%);z-index:-1}
+.launcher-circuit{position:absolute;width:190px;height:140px;border:1px solid #8db5ff55;clip-path:polygon(14% 0,86% 0,100% 24%,100% 76%,86% 100%,14% 100%,0 76%,0 24%);transform:rotate(18deg)}
+.launcher-circuit-one{width:240px;height:160px}
+.launcher-circuit-two{width:178px;height:205px;transform:rotate(-24deg);border-style:dashed;opacity:.75}
+.launcher-crosshair{position:absolute;width:290px;height:1px;background:linear-gradient(90deg,transparent,#8db5ff55,transparent);transform:rotate(-32deg)}
+.launcher-logo-plaque{border-color:#8db5ff66;box-shadow:0 16px 48px #0007,0 0 42px #4b85e833}
+.launcher-sticker{border-color:#8db5ff75;color:#c9d9ff;background:#101d35df}
+.visual-circle{background:radial-gradient(ellipse at 50% 48%,#493777,#211b40 58%,#100f20)}
+.circle-rings-one{width:255px;height:105px;transform:rotate(-18deg);border-style:dotted}
+.circle-rings-two{width:205px;height:205px;border-style:solid;border-color:#bca4ff38}
+.circle-sticker{border-color:#bca4ff70;color:#e1d7ff;background:#211a3be8}
+.visual-connect{background:radial-gradient(ellipse at 50% 50%,#15566f,#0d2638 52%,#09121f)}
+.connect-signal{position:absolute;border:1px solid #58c9ff65;border-radius:18px;transform:skewX(-24deg)}
+.connect-signal-one{width:270px;height:92px}
+.connect-signal-two{width:205px;height:145px;transform:skewX(24deg);border-style:dashed;opacity:.75}
+.connect-devices{gap:19px}
+.connect-sticker{border-color:#58c9ff75;color:#b5f0ff;background:#0b2638e8}
+@media(max-width:600px){
+ .project-visual .visual-sticker{top:12px;right:12px;font-size:7px;padding:5px 7px}
+ .launcher-circuit-one{width:205px;height:135px}
+ .launcher-circuit-two{width:155px;height:180px}
+ .nexo-orbit{width:190px;height:115px}
+}
