@@ -1,11 +1,30 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#091629"><meta name="description" content="Nexo: gestor personal de contactos privado, sencillo y sin nube."><title>Nexo — N3mesis Studio</title><link rel="icon" href="../assets/icon_nexo.png"><link rel="stylesheet" href="../product.css"></head>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#091629"><meta name="description" content="Nexo: gestor personal de contactos privado, sencillo y sin nube."><title>Nexo — N3mesis Studio</title><link rel="icon" href="../assets/icon_nexo.png"><link rel="stylesheet" href="../product.css">
+<style>
+/* Visor ampliado de capturas de Nexo */
+.screenshot-card img{cursor:zoom-in;transition:filter .2s,transform .2s}
+.screenshot-card img:hover{filter:brightness(1.08)}
+.screenshot-card img:focus-visible{outline:3px solid #75caff;outline-offset:4px}
+.gallery-lightbox{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:clamp(14px,3vw,38px);background:rgba(3,7,14,.94);backdrop-filter:blur(12px)}
+.gallery-lightbox.is-open{display:flex}
+.gallery-lightbox img{display:block;max-width:min(94vw,1200px);max-height:82vh;width:auto;height:auto;object-fit:contain;border:1px solid #ffffff24;border-radius:12px;box-shadow:0 24px 90px #000b}
+.gallery-lightbox .gallery-caption{position:absolute;bottom:max(16px,env(safe-area-inset-bottom));left:70px;right:70px;text-align:center;color:#e5f5ff;font-size:11px;letter-spacing:1.5px}
+.gallery-lightbox button{position:absolute;display:grid;place-items:center;border:1px solid #ffffff35;background:#102438;color:#fff;border-radius:50%;width:44px;height:44px;font-size:25px;cursor:pointer}
+.gallery-lightbox button:hover{background:#1c4261}
+.gallery-lightbox .gallery-close{top:18px;right:18px;font-size:27px}
+.gallery-lightbox .gallery-prev{left:18px;top:50%;transform:translateY(-50%)}
+.gallery-lightbox .gallery-next{right:18px;top:50%;transform:translateY(-50%)}
+.gallery-lightbox button:focus-visible{outline:3px solid #75caff;outline-offset:3px}
+body.gallery-open{overflow:hidden}
+@media(max-width:600px){.gallery-lightbox{padding:12px}.gallery-lightbox img{max-width:96vw;max-height:76vh;border-radius:8px}.gallery-lightbox .gallery-prev{left:8px}.gallery-lightbox .gallery-next{right:8px}.gallery-lightbox button{width:40px;height:40px}.gallery-lightbox .gallery-caption{left:55px;right:55px;font-size:9px}}
+</style>
+</head>
 <body class="app-nexo">
 <header class="product-header"><a class="back-brand" href="../"><img src="../assets/icon.png" alt="N3mesis Studio"><span>N3MESIS <small>STUDIO</small></span></a><a class="back-link" href="../">← Volver al estudio</a></header>
 <main>
 <section class="product-hero wrap"><div class="product-hero-copy"><div class="eyebrow">N3MESIS STUDIO · PRODUCTIVIDAD</div><div class="product-title-row"><img class="app-icon" src="../assets/icon_nexo.png" alt="Icono de Nexo"><div><h1>NEXO</h1><p class="tagline">Tu agenda. Tu información. Tu control.</p></div></div><p class="lead">Un gestor personal de contactos privado y sencillo. Organiza tu agenda, importa tus contactos y conserva tu información en tu dispositivo, sin depender de una nube.</p><div class="hero-pills"><span>Privacidad local</span><span>Sin cuenta</span><span>Importar y exportar</span><span>Sin conexión</span></div><a class="download-button" href="#descarga">Opciones de descarga <span>↓</span></a><p class="availability">Consulta el código fuente y las publicaciones oficiales de Nexo en GitHub.</p></div><div class="hero-showcase"><div class="showcase-glow"></div><img src="../assets/icon_nexo.png" alt="" class="showcase-icon"></div></section>
 <section class="wrap product-section"><div class="section-kicker">TU AGENDA, A TU MANERA</div><h2>Todo conectado. <em>Bajo tu control.</em></h2><div class="feature-grid"><article><b>01</b><h3>Contactos completos</h3><p>Guarda teléfonos, correos, direcciones, organizaciones, redes sociales, notas, cumpleaños y fotografías.</p></article><article><b>02</b><h3>Etiquetas y colecciones</h3><p>Organiza tu agenda con tus propias categorías y encuentra cada persona rápidamente.</p></article><article><b>03</b><h3>Importa y exporta</h3><p>Admite archivos vCard (VCF), CSV y JSON para importar, exportar o trasladar tu agenda.</p></article><article><b>04</b><h3>Copias de seguridad</h3><p>Crea copias de tu agenda y restáuralas cuando las necesites.</p></article><article><b>05</b><h3>Cumpleaños y avisos</h3><p>Registra fechas importantes y configura recordatorios para no olvidarlas.</p></article><article><b>06</b><h3>Privacidad ante todo</h3><p>Sin registro ni cuenta. Tus contactos y sus fotografías permanecen almacenados localmente en tu dispositivo.</p></article></div></section>
-<section class="screens-section"><div class="wrap"><div class="section-kicker">CONOCE NEXO</div><h2>Una agenda clara, <em>sin complicaciones.</em></h2><p class="section-intro">Las capturas se mostrarán al subir los archivos PNG con los nombres previstos.</p><div class="screenshot-grid">
+<section class="screens-section"><div class="wrap"><div class="section-kicker">CONOCE NEXO</div><h2>Una agenda clara, <em>sin complicaciones.</em></h2><p class="section-intro">Pulsa cualquier captura para ampliarla y navegar por la galería. Las imágenes aparecerán cuando estén subidas al repositorio.</p><div class="screenshot-grid">
 <figure class="screenshot-card"><img src="../assets/screenshots/nexo/nexo-contacts.png" alt="Lista de contactos en Nexo" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="screenshot-placeholder" hidden><span>01</span><b>CONTACTOS</b><small>Captura pendiente</small></div><figcaption>CONTACTOS</figcaption></figure>
 <figure class="screenshot-card"><img src="../assets/screenshots/nexo/nexo-detail.png" alt="Ficha de contacto en Nexo" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="screenshot-placeholder" hidden><span>02</span><b>DETALLE</b><small>Captura pendiente</small></div><figcaption>DETALLE</figcaption></figure>
 <figure class="screenshot-card"><img src="../assets/screenshots/nexo/nexo-collections.png" alt="Colecciones de contactos en Nexo" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="screenshot-placeholder" hidden><span>03</span><b>COLECCIONES</b><small>Captura pendiente</small></div><figcaption>COLECCIONES</figcaption></figure>
@@ -13,4 +32,63 @@
 </div></div></section>
 <section class="wrap product-section"><div class="section-kicker">INFORMACIÓN DE LA APP</div><h2>Detalles <em>importantes.</em></h2><div class="spec-grid"><div><span>Versión</span><b>1.0</b></div><div><span>Plataforma</span><b>Android</b></div><div><span>Desarrollado con</span><b>Flutter</b></div><div><span>Formatos</span><b>VCF · CSV · JSON</b></div><div><span>Conexión</span><b>Uso sin conexión</b></div><div><span>Almacenamiento</span><b>Local en el dispositivo</b></div></div></section>
 <section class="download-section" id="descarga"><div class="wrap download-panel"><div><div class="section-kicker">GITHUB Y DESCARGAS</div><h2>Tu agenda, <em>contigo.</em></h2><p>Consulta el código fuente y las publicaciones oficiales de Nexo. Cuando haya una versión publicada, el enlace de última versión te llevará automáticamente a la release más reciente.</p></div><div class="download-actions"><a class="download-button" href="https://github.com/Ocelote9547/nexo/releases/latest" target="_blank" rel="noopener">Última versión <span>↗</span></a><a class="release-link" href="https://github.com/Ocelote9547/nexo" target="_blank" rel="noopener">Ver repositorio y código fuente ↗</a></div></div></section>
-</main><footer class="product-footer"><a href="../">N3mesis Studio</a><span>Nexo · Tu agenda, bajo tu control.</span></footer></body></html>
+</main>
+<div class="gallery-lightbox" id="screenshot-viewer" role="dialog" aria-modal="true" aria-label="Visor de capturas de Nexo" aria-hidden="true">
+  <button class="gallery-close" type="button" aria-label="Cerrar imagen">×</button>
+  <button class="gallery-prev" type="button" aria-label="Imagen anterior">‹</button>
+  <img src="" alt="">
+  <button class="gallery-next" type="button" aria-label="Imagen siguiente">›</button>
+  <div class="gallery-caption" aria-live="polite"></div>
+</div>
+<script>
+(() => {
+  const viewer = document.getElementById('screenshot-viewer');
+  if (!viewer) return;
+  const pictures = [...document.querySelectorAll('.screenshot-card img')].filter(picture => !picture.hidden);
+  if (!pictures.length) return;
+  const largeImage = viewer.querySelector('img');
+  const caption = viewer.querySelector('.gallery-caption');
+  const closeButton = viewer.querySelector('.gallery-close');
+  const previousButton = viewer.querySelector('.gallery-prev');
+  const nextButton = viewer.querySelector('.gallery-next');
+  let activeIndex = 0;
+  let previousFocus = null;
+  const openAt = index => {
+    activeIndex = (index + pictures.length) % pictures.length;
+    const picture = pictures[activeIndex];
+    largeImage.src = picture.currentSrc || picture.src;
+    largeImage.alt = picture.alt;
+    caption.textContent = (picture.closest('figure')?.querySelector('figcaption')?.textContent || picture.alt) + ' · ' + (activeIndex + 1) + ' / ' + pictures.length;
+    viewer.classList.add('is-open');
+    viewer.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('gallery-open');
+    closeButton.focus();
+  };
+  const close = () => {
+    viewer.classList.remove('is-open');
+    viewer.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('gallery-open');
+    largeImage.removeAttribute('src');
+    if (previousFocus) previousFocus.focus();
+  };
+  pictures.forEach((picture, index) => {
+    picture.tabIndex = 0;
+    picture.setAttribute('role', 'button');
+    picture.setAttribute('aria-label', 'Ampliar: ' + picture.alt);
+    picture.addEventListener('click', () => { previousFocus = picture; openAt(index); });
+    picture.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); previousFocus = picture; openAt(index); }
+    });
+  });
+  closeButton.addEventListener('click', close);
+  previousButton.addEventListener('click', () => openAt(activeIndex - 1));
+  nextButton.addEventListener('click', () => openAt(activeIndex + 1));
+  viewer.addEventListener('click', event => { if (event.target === viewer) close(); });
+  document.addEventListener('keydown', event => {
+    if (!viewer.classList.contains('is-open')) return;
+    if (event.key === 'Escape') close();
+    if (event.key === 'ArrowLeft') openAt(activeIndex - 1);
+    if (event.key === 'ArrowRight') openAt(activeIndex + 1);
+  });
+})();
+</script><footer class="product-footer"><a href="../">N3mesis Studio</a><span>Nexo · Tu agenda, bajo tu control.</span></footer></body></html>
