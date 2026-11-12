@@ -10,6 +10,31 @@
   <title>N3mesis Launcher — N3mesis Studio</title>
   <link rel="icon" href="../assets/icon.png" type="image/png">
   <link rel="stylesheet" href="../product.css">
+
+<style>
+/* Visor ampliado de capturas */
+.screenshot-card img{cursor:zoom-in;transition:filter .2s,transform .2s}
+.screenshot-card img:hover{filter:brightness(1.08)}
+.screenshot-card img:focus-visible{outline:3px solid #8fc6ff;outline-offset:4px}
+.gallery-lightbox{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:clamp(14px,3vw,38px);background:rgba(3,7,14,.94);backdrop-filter:blur(12px)}
+.gallery-lightbox.is-open{display:flex}
+.gallery-lightbox img{display:block;max-width:min(94vw,1600px);max-height:82vh;width:auto;height:auto;object-fit:contain;border:1px solid #ffffff24;border-radius:12px;box-shadow:0 24px 90px #000b}
+.gallery-lightbox .gallery-caption{position:absolute;bottom: max(16px,env(safe-area-inset-bottom));left:70px;right:70px;text-align:center;color:#dce9f8;font-size:11px;letter-spacing:1.5px}
+.gallery-lightbox button{position:absolute;display:grid;place-items:center;border:1px solid #ffffff35;background:#111d2b;color:#fff;border-radius:50%;width:44px;height:44px;font-size:25px;cursor:pointer}
+.gallery-lightbox button:hover{background:#203954}
+.gallery-lightbox .gallery-close{top:18px;right:18px;font-size:27px}
+.gallery-lightbox .gallery-prev{left:18px;top:50%;transform:translateY(-50%)}
+.gallery-lightbox .gallery-next{right:18px;top:50%;transform:translateY(-50%)}
+.gallery-lightbox button:focus-visible{outline:3px solid #8fc6ff;outline-offset:3px}
+body.gallery-open{overflow:hidden}
+@media(max-width:600px){
+ .gallery-lightbox{padding:12px}
+ .gallery-lightbox img{max-width:96vw;max-height:76vh;border-radius:8px}
+ .gallery-lightbox .gallery-prev{left:8px}.gallery-lightbox .gallery-next{right:8px}
+ .gallery-lightbox button{width:40px;height:40px}
+ .gallery-lightbox .gallery-caption{left:55px;right:55px;font-size:9px}
+}
+</style>
 </head>
 <body class="app-launcher">
 <header class="product-header">
@@ -105,5 +130,64 @@
   <p class="wrap legal-note">N3mesis Launcher es un proyecto independiente y no está afiliado, respaldado ni asociado oficialmente con Mojang o Microsoft. Minecraft es una marca de sus respectivos propietarios.</p>
 </main>
 <footer class="product-footer"><a href="../">N3mesis Studio</a><span>N3mesis Launcher · Minecraft Java Edition para Windows.</span></footer>
+
+<div class="gallery-lightbox" id="screenshot-viewer" role="dialog" aria-modal="true" aria-label="Visor de capturas" aria-hidden="true">
+  <button class="gallery-close" type="button" aria-label="Cerrar imagen">×</button>
+  <button class="gallery-prev" type="button" aria-label="Imagen anterior">‹</button>
+  <img src="" alt="">
+  <button class="gallery-next" type="button" aria-label="Imagen siguiente">›</button>
+  <div class="gallery-caption" aria-live="polite"></div>
+</div>
+<script>
+(() => {
+  const viewer = document.getElementById('screenshot-viewer');
+  if (!viewer) return;
+  const pictures = [...document.querySelectorAll('.screenshot-card img:not([hidden])')];
+  const largeImage = viewer.querySelector('img');
+  const caption = viewer.querySelector('.gallery-caption');
+  const closeButton = viewer.querySelector('.gallery-close');
+  const previousButton = viewer.querySelector('.gallery-prev');
+  const nextButton = viewer.querySelector('.gallery-next');
+  let activeIndex = 0;
+  let previousFocus = null;
+  const openAt = index => {
+    activeIndex = (index + pictures.length) % pictures.length;
+    const picture = pictures[activeIndex];
+    largeImage.src = picture.currentSrc || picture.src;
+    largeImage.alt = picture.alt;
+    caption.textContent = (picture.closest('figure')?.querySelector('figcaption')?.textContent || picture.alt) + ' · ' + (activeIndex + 1) + ' / ' + pictures.length;
+    viewer.classList.add('is-open');
+    viewer.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('gallery-open');
+    closeButton.focus();
+  };
+  const close = () => {
+    viewer.classList.remove('is-open');
+    viewer.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('gallery-open');
+    largeImage.removeAttribute('src');
+    if (previousFocus) previousFocus.focus();
+  };
+  pictures.forEach((picture, index) => {
+    picture.tabIndex = 0;
+    picture.setAttribute('role', 'button');
+    picture.setAttribute('aria-label', 'Ampliar: ' + picture.alt);
+    picture.addEventListener('click', () => { previousFocus = picture; openAt(index); });
+    picture.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); previousFocus = picture; openAt(index); }
+    });
+  });
+  closeButton.addEventListener('click', close);
+  previousButton.addEventListener('click', () => openAt(activeIndex - 1));
+  nextButton.addEventListener('click', () => openAt(activeIndex + 1));
+  viewer.addEventListener('click', event => { if (event.target === viewer) close(); });
+  document.addEventListener('keydown', event => {
+    if (!viewer.classList.contains('is-open')) return;
+    if (event.key === 'Escape') close();
+    if (event.key === 'ArrowLeft') openAt(activeIndex - 1);
+    if (event.key === 'ArrowRight') openAt(activeIndex + 1);
+  });
+})();
+</script>
 </body>
 </html>
