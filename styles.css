@@ -348,3 +348,102 @@ a.project-card .project-visual{flex-shrink:0}
  .launcher-circuit-two{width:155px;height:180px}
  .nexo-orbit{width:190px;height:115px}
 }
+
+
+/* Ajuste final de las etiquetas de portada: legibles, centradas y con fondo */
+.project-visual{position:relative;isolation:isolate}
+.project-visual .visual-sticker{
+  position:absolute;
+  top:15px;
+  left:50%;
+  right:auto;
+  z-index:5;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:max-content;
+  max-width:calc(100% - 28px);
+  box-sizing:border-box;
+  padding:6px 11px;
+  border:1px solid;
+  border-radius:5px;
+  font-size:8px;
+  line-height:1.25;
+  font-weight:800;
+  letter-spacing:1.15px;
+  text-align:center;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  box-shadow:0 5px 16px #0005;
+  backdrop-filter:blur(8px);
+  transform:translateX(-50%) rotate(-3deg);
+  pointer-events:none;
+}
+.project-visual .visual-label{
+  left:50%;
+  right:auto;
+  bottom:13px;
+  z-index:2;
+  width:calc(100% - 30px);
+  max-width:100%;
+  text-align:center;
+  line-height:1.4;
+  transform:translateX(-50%);
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+/* Party — lava naranja */
+.visual-party .visual-sticker{
+  color:#ffe0c4;
+  border-color:#ff873d99;
+  background:linear-gradient(135deg,#5b210feF,#29110ff2);
+}
+/* Nexo — azul eléctrico */
+.visual-nexo .visual-sticker{
+  color:#d7edff;
+  border-color:#58aef599;
+  background:linear-gradient(135deg,#123b60f2,#0b1b30f5);
+}
+/* Utils — grafito y plata */
+.visual-utils .visual-sticker{
+  color:#f0f3f7;
+  border-color:#aeb9c599;
+  background:linear-gradient(135deg,#414b59f2,#202832f5);
+}
+/* Launcher — azul/cian AURORA */
+.visual-launcher .visual-sticker{
+  color:#d9f5ff;
+  border-color:#55c9ff99;
+  background:linear-gradient(135deg,#123c68f2,#172044f5);
+}
+/* Circle — violeta */
+.visual-circle .visual-sticker{
+  color:#f0eaff;
+  border-color:#b69aff99;
+  background:linear-gradient(135deg,#493477f2,#211a3bf5);
+}
+/* Connect — cian */
+.visual-connect .visual-sticker{
+  color:#d9faff;
+  border-color:#54d7f599;
+  background:linear-gradient(135deg,#15546af2,#0b2638f5);
+}
+@media(max-width:600px){
+  .project-visual .visual-sticker{
+    top:12px;
+    max-width:calc(100% - 24px);
+    padding:5px 9px;
+    font-size:7px;
+    letter-spacing:.9px;
+  }
+  .project-visual .visual-label{
+    bottom:11px;
+    width:calc(100% - 22px);
+    font-size:7px;
+    letter-spacing:1.25px;
+  }
+}
+@media(max-width:360px){
+  .project-visual .visual-sticker{max-width:calc(100% - 18px);font-size:6.5px}
+  .project-visual .visual-label{font-size:6.5px;letter-spacing:1px}
+}
