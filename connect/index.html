@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#091321">
+  <meta name="description" content="N3mesis Connect: el concepto de una aplicación para conectar Android y Windows y compartir archivos, texto y enlaces. Proyecto en planificación.">
+  <meta property="og:title" content="N3mesis Connect — N3mesis Studio">
+  <meta property="og:description" content="Una conexión sencilla entre Android y Windows. Proyecto conceptual de N3mesis Studio.">
+  <title>N3mesis Connect — N3mesis Studio</title>
+  <link rel="icon" href="../assets/icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../product.css">
+  <style>
+    .app-connect{--accent:#67caff;--accent2:#b8eaff;--glow:#087eb8}
+    .connect-symbol{width:92px;height:92px;display:grid;place-items:center;border-radius:23px;border:1px solid #67caff66;background:linear-gradient(145deg,#174d70,#102239);color:#b8edff;font-size:45px;box-shadow:0 15px 40px #0007,0 0 40px #20a9e933}
+    .connect-showcase{position:relative;display:flex;align-items:center;justify-content:center;gap:24px;min-height:340px}
+    .connect-showcase:before,.connect-showcase:after{content:"";position:absolute;border:1px solid #67caff35;border-radius:50%;width:270px;height:120px;transform:rotate(-25deg)}
+    .connect-showcase:after{width:210px;height:210px;transform:rotate(40deg);border-style:dashed}
+    .device-phone{z-index:1;width:76px;height:145px;border:3px solid #9de5ff;border-radius:17px;background:linear-gradient(145deg,#245b7c,#0c1d31);box-shadow:0 0 35px #20baff30}
+    .device-arrow{z-index:1;color:#a5eaff;font-size:30px}
+    .device-monitor{z-index:1;width:150px;height:105px;border:3px solid #85d4ff;border-radius:9px;background:linear-gradient(145deg,#1c4d70,#0c1c30);position:relative;box-shadow:0 0 35px #20baff25}
+    .device-monitor:after{content:"";position:absolute;bottom:-12px;left:45px;width:54px;height:8px;background:#85d4ff;border-radius:0 0 5px 5px}
+    .app-connect .feature-grid article{background:linear-gradient(145deg,#14283a,#0d1724)}
+    .planned-note{border:1px solid #67caff35;background:#67caff0b;border-radius:12px;padding:18px 20px;color:#c9d9e8;font-size:12px;line-height:1.8}
+    .planned-note b{color:#b8eaff}
+    .roadmap-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+    .roadmap-list article{padding:19px;border:1px solid var(--line);border-radius:12px;background:#ffffff05}
+    .roadmap-list small{color:var(--accent);font-size:9px;letter-spacing:1.4px;font-weight:800}
+    .roadmap-list h3{font-size:15px;margin:8px 0 5px}
+    .roadmap-list p{font-size:11px;color:var(--muted);margin:0;line-height:1.7}
+    @media(max-width:760px){.connect-showcase{min-height:240px}.roadmap-list{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){.connect-symbol{width:70px;height:70px;font-size:35px}.connect-showcase{gap:15px}.device-phone{width:59px;height:118px}.device-monitor{width:112px;height:82px}.device-monitor:after{left:33px;width:42px}.roadmap-list{grid-template-columns:1fr}}
+  </style>
+</head>
+<body class="app-connect">
+  <header class="product-header">
+    <a class="back-brand" href="../"><img src="../assets/icon.png" alt="N3mesis Studio"><span>N3MESIS <small>STUDIO</small></span></a>
+    <a class="back-link" href="../">← Volver al estudio</a>
+  </header>
+  <main>
+    <section class="product-hero wrap">
+      <div class="product-hero-copy">
+        <div class="eyebrow">N3MESIS STUDIO · PRODUCTIVIDAD</div>
+        <div class="product-title-row"><div class="connect-symbol" aria-hidden="true">↔</div><div><h1>CONNECT</h1><p class="tagline">Tus dispositivos. Una conexión.</p></div></div>
+        <p class="lead">N3mesis Connect es un proyecto en fase conceptual que busca hacer mucho más sencillo el intercambio de información entre un móvil Android y un ordenador Windows. La idea es compartir archivos, texto y enlaces sin complicaciones.</p>
+        <div class="hero-pills"><span>Android</span><span>Windows</span><span>Conexión local y remota prevista</span><span>Proyecto planificado</span></div>
+        <div class="planned-note"><b>Estado actual:</b> Connect todavía no está en desarrollo activo. Primero estamos centrados en completar y estabilizar los proyectos actuales de N3mesis Studio. No hay versión pública ni fecha de lanzamiento.</div>
+      </div>
+      <div class="hero-showcase connect-showcase" role="img" aria-label="Concepto visual de un teléfono y un ordenador conectados">
+        <div class="device-phone"></div><span class="device-arrow">↔</span><div class="device-monitor"></div>
+      </div>
+    </section>
+
+    <section class="wrap product-section">
+      <div class="section-kicker">01 / PROPÓSITO</div>
+      <h2>Compartir entre dispositivos debería ser <em>muy sencillo.</em></h2>
+      <p class="section-intro">La propuesta es crear una herramienta práctica para pasar información entre Android y Windows, con una experiencia clara, rápida y centrada en la privacidad.</p>
+      <div class="feature-grid">
+        <article><b>01</b><h3>Transferir archivos</h3><p>Enviar fotografías, vídeos y documentos entre el móvil y el ordenador, con progreso y confirmación de recepción.</p></article>
+        <article><b>02</b><h3>Portapapeles compartido</h3><p>Enviar texto de un dispositivo a otro mediante acciones explícitas del usuario, con controles claros de privacidad.</p></article>
+        <article><b>03</b><h3>Compartir enlaces</h3><p>Mandar una página web o un enlace desde Android a Windows y viceversa sin tener que recurrir a otros servicios.</p></article>
+        <article><b>04</b><h3>Vinculación sencilla</h3><p>Emparejar dispositivos mediante un código QR y mantener el control sobre qué equipos están autorizados.</p></article>
+        <article><b>05</b><h3>Conexión local</h3><p>La primera prioridad sería transferir directamente por la misma red local, sin subir los archivos a una nube.</p></article>
+        <article><b>06</b><h3>Conexión remota</h3><p>Como evolución futura, permitir el intercambio entre redes diferentes mediante una conexión segura a través de Internet.</p></article>
+      </div>
+    </section>
+
+    <section class="screens-section">
+      <div class="wrap">
+        <div class="section-kicker">02 / EXPERIENCIA PREVISTA</div>
+        <h2>Una experiencia <em>directa y ordenada.</em></h2>
+        <p class="section-intro">La dirección de diseño prevista es una interfaz oscura, con azul eléctrico y cian, navegación sencilla y acciones visibles. Estas son las áreas que se contemplan para el producto; todavía no son capturas de una aplicación funcional.</p>
+        <div class="feature-grid">
+          <article><b>ANDROID</b><h3>Inicio y dispositivos</h3><p>Ver los equipos vinculados y acceder rápidamente a enviar o recibir.</p></article>
+          <article><b>ANDROID</b><h3>Transferencias</h3><p>Consultar el progreso, la velocidad, el tamaño y el estado de cada envío.</p></article>
+          <article><b>WINDOWS</b><h3>Panel de escritorio</h3><p>Acceder a dispositivos, transferencias y acciones rápidas desde una ventana clara.</p></article>
+          <article><b>AMBAS PLATAFORMAS</b><h3>Privacidad y ajustes</h3><p>Gestionar dispositivos autorizados, permisos, preferencias y cuenta opcional.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap product-section">
+      <div class="section-kicker">03 / PRINCIPIOS DEL PRODUCTO</div>
+      <h2>Útil, gratuito y <em>bajo control del usuario.</em></h2>
+      <div class="spec-grid">
+        <div><span>Plataformas previstas</span><b>Android y Windows</b></div>
+        <div><span>Cuenta</span><b>Opcional</b></div>
+        <div><span>Primera conexión</span><b>Emparejamiento QR</b></div>
+        <div><span>Modelo de uso</span><b>Gratuito</b></div>
+        <div><span>Privacidad</span><b>Transferencia cifrada prevista</b></div>
+        <div><span>Disponibilidad</span><b>Sin fecha anunciada</b></div>
+      </div>
+      <p class="section-intro" style="margin-top:20px">La arquitectura y las tecnologías todavía están por validar durante el desarrollo. La planificación contempla una aplicación para Android y Windows, comunicación local y una posible modalidad remota en una fase posterior.</p>
+    </section>
+
+    <section class="wrap product-section">
+      <div class="section-kicker">04 / DESARROLLO POR ETAPAS</div>
+      <h2>Primero lo esencial. Después, <em>más posibilidades.</em></h2>
+      <div class="roadmap-list">
+        <article><small>ETAPA 01 · MVP</small><h3>Conexión local</h3><p>Emparejamiento QR, transferencia de archivos, envío de texto y enlaces, portapapeles manual e historial básico.</p></article>
+        <article><small>ETAPA 02 · EVOLUCIÓN</small><h3>Conexión remota</h3><p>Comunicación entre redes diferentes, con señalización y retransmisión segura cuando sea necesaria.</p></article>
+        <article><small>ETAPA 03 · MEJORAS</small><h3>Más comodidad</h3><p>Sincronización de portapapeles con controles explícitos, envío de carpetas y mejoras de integración en Windows.</p></article>
+        <article><small>ETAPA 04 · ECOSISTEMA</small><h3>Cuenta opcional</h3><p>Explorar funciones adicionales de cuenta sin convertir el registro en un requisito para las transferencias locales.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap product-section">
+      <div class="section-kicker">05 / SOSTENIBILIDAD</div>
+      <h2>Un proyecto gratuito, con apoyo <em>voluntario.</em></h2>
+      <p class="section-intro">La idea de financiación que se está estudiando combina publicidad muy limitada —como máximo una oportunidad publicitaria cada 24 horas, sin interrumpir transferencias— con donaciones voluntarias mediante plataformas como Buy Me a Coffee u otras alternativas. Este modelo todavía no está implementado ni confirmado.</p>
+      <div class="planned-note">Las funciones principales se plantean como gratuitas. Las donaciones serían una forma opcional de apoyar el desarrollo, no una condición para desbloquear funciones.</div>
+    </section>
+
+    <section class="download-section wrap">
+      <div class="download-panel">
+        <div><div class="section-kicker">06 / DISPONIBILIDAD</div><h2>En fase de <em>planificación.</em></h2><p>Connect todavía no se puede descargar ni probar. Compartiremos novedades cuando el proyecto entre en desarrollo y haya avances que podamos enseñar.</p></div>
+        <span class="coming-soon">SIN DESCARGA DISPONIBLE</span>
+      </div>
+    </section>
+  </main>
+  <footer class="product-footer"><a href="../">N3mesis Studio</a><span>N3mesis Connect · Proyecto conceptual.</span></footer>
+</body>
+</html>
