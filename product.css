@@ -239,3 +239,75 @@ body{font-family:'DM Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;t
  .back-brand img,.feature-grid article,.download-button{transition:none!important}
  .back-brand:hover img,.feature-grid article:hover,.download-button:hover{transform:none}
 }
+
+
+/* Fases 3 y 4 — sistema compartido para las seis fichas */
+html{scroll-padding-top:92px}
+body{overflow-x:hidden}
+.product-header{
+  position:sticky;top:0;z-index:50;height:72px;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+}
+.product-header a:focus-visible,.product-footer a:focus-visible,
+.download-actions a:focus-visible,.feedback-actions a:focus-visible,
+.faq-list summary:focus-visible,.screenshot-card img:focus-visible{
+  outline:3px solid var(--accent);outline-offset:4px;border-radius:5px
+}
+.skip-link{
+  position:fixed;z-index:2000;top:10px;left:10px;
+  transform:translateY(-160%);padding:11px 15px;border-radius:8px;
+  background:var(--accent);color:#10151c;font-weight:800;font-size:13px;
+  box-shadow:0 8px 25px #0008
+}
+.skip-link:focus{transform:translateY(0);outline:3px solid #fff;outline-offset:3px}
+.product-hero{min-width:0}
+.product-hero-copy,.hero-showcase{min-width:0}
+.product-section,.screens-section,.download-section,.feedback-section{scroll-margin-top:88px}
+.product-section h2,.screens-section h2,.download-panel h2{max-width:850px;text-wrap:balance}
+.section-intro,.lead,.feature-grid p,.download-panel p,.faq-list details p{overflow-wrap:anywhere}
+.feature-grid article{transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.feature-grid article:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 38%,var(--line));box-shadow:0 14px 34px #0003}
+.screenshot-card{min-width:0;margin:0}
+.screenshot-card img{display:block;width:100%;height:auto;max-height:620px;object-fit:contain;border-radius:14px}
+.screenshot-card figcaption{margin-top:9px;color:var(--muted);font-size:10px;letter-spacing:1.4px}
+.gallery-lightbox{overscroll-behavior:contain}
+.gallery-lightbox img{max-width:calc(100vw - 32px);max-height:calc(100dvh - 110px)}
+.download-panel{min-width:0}
+.download-actions{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:min(260px,100%)}
+.download-actions .download-button{max-width:100%;white-space:normal}
+.release-link,.feedback-actions a{color:var(--accent2);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 55%,transparent);text-underline-offset:4px}
+.release-link:hover,.feedback-actions a:hover{color:var(--text)}
+.product-footer{min-height:76px;flex-wrap:wrap}
+.product-footer span{max-width:100%;overflow-wrap:anywhere}
+@media(max-width:760px){
+  .product-header{height:64px}
+  .product-hero{grid-template-columns:minmax(0,1fr);gap:8px}
+  .hero-showcase{min-height:210px}
+  .product-section{padding-top:58px;padding-bottom:60px}
+  .screens-section{padding:55px 0}
+  .download-section{padding-bottom:60px}
+  .download-panel{width:100%;padding:26px}
+  .download-actions{width:100%}
+  .download-actions .download-button{width:100%;justify-content:space-between}
+}
+@media(max-width:420px){
+  .wrap,.product-header{width:calc(100% - 28px)}
+  .back-brand{gap:7px;font-size:10px;letter-spacing:1.4px}
+  .back-brand img{width:32px;height:32px}
+  .back-link{font-size:10px}
+  .product-title-row{align-items:flex-start}
+  .product-title-row h1{overflow-wrap:anywhere}
+  .hero-pills{gap:6px}
+  .hero-pills span{font-size:9px}
+  .spec-grid{grid-template-columns:1fr}
+  .spec-grid div,.spec-grid div:nth-child(2n),.spec-grid div:nth-child(3n){border-right:0;border-bottom:1px solid var(--line)}
+  .spec-grid div:last-child{border-bottom:0}
+  .download-panel{padding:21px}
+  .gallery-lightbox .gallery-caption{font-size:9px;letter-spacing:.6px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .feature-grid article:hover{transform:none}
+}
