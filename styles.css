@@ -514,3 +514,15 @@ a.project-card .project-visual{flex-shrink:0}
  .brand-logo-image,.news-card,.nav a{transition:none!important}
  .brand:hover .brand-logo-image,.news-card:hover{transform:none}
 }
+
+
+/* Calidad técnica — portada */
+.skip-link{position:fixed;z-index:2000;top:10px;left:10px;transform:translateY(-160%);padding:11px 15px;border-radius:8px;background:var(--blue-bright);color:#08111d;font-weight:800;font-size:13px;box-shadow:0 8px 25px #0008}
+.skip-link:focus{transform:translateY(0);outline:3px solid #fff;outline-offset:3px}
+:where(a,button,[tabindex]):focus-visible{outline:3px solid var(--blue-bright);outline-offset:4px}
+#contenido section[id]{scroll-margin-top:96px}
+.project-card,.news-card,.button,.nav a{ -webkit-tap-highlight-color:transparent }
+.project-card:focus-visible{border-radius:14px}
+img{max-width:100%}
+@media(max-width:600px){.section-wrap{width:calc(100% - 34px)}.site-header{width:calc(100% - 34px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
