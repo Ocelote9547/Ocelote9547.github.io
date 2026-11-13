@@ -200,3 +200,42 @@
 .feedback-actions a:hover{color:var(--text)}
 @media(max-width:760px){.feedback-panel{align-items:flex-start;flex-direction:column}.feedback-actions{width:100%}}
 @media(prefers-reduced-motion:reduce){.hero-signature:before{box-shadow:none}}
+
+
+/* N3mesis Studio · pulido visual compartido V2 */
+:root{--display:'Space Grotesk','DM Sans',Arial,sans-serif}
+html{scroll-padding-top:88px}
+body{font-family:'DM Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.product-header{position:sticky;top:0;z-index:30;background:#090d14eF;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.back-brand img{transition:transform .25s ease}
+.back-brand:hover img{transform:rotate(-5deg) scale(1.04)}
+.back-link{padding:9px 12px;border:1px solid transparent;border-radius:8px;transition:color .2s,border-color .2s,background .2s}
+.back-link:hover{border-color:var(--line);background:#ffffff08}
+.product-hero{padding-top:74px;padding-bottom:76px}
+.product-hero-copy{position:relative;z-index:1}
+.product-title-row h1{font-family:var(--display);letter-spacing:-2.8px}
+.tagline{font-weight:500}
+.hero-signature{backdrop-filter:blur(8px)}
+.hero-showcase{isolation:isolate}
+.showcase-icon,.product-hero .app-icon{filter:drop-shadow(0 20px 34px #0008)}
+.feature-grid article{box-shadow:0 8px 24px #00000012}
+.feature-grid article:hover{box-shadow:0 16px 34px #0004}
+.faq-section{padding-top:48px;padding-bottom:56px}
+.faq-list summary{transition:color .18s}
+.faq-list summary:hover{color:var(--accent2)}
+.download-panel{box-shadow:0 18px 48px #0003}
+.download-button{transition:filter .2s,transform .2s,box-shadow .2s}
+.download-button:hover{box-shadow:0 10px 28px color-mix(in srgb,var(--accent) 22%,transparent)}
+.product-footer{gap:18px}
+.product-footer a{transition:color .2s}
+.product-footer a:hover{color:var(--accent)}
+:where(a,button,summary,[tabindex]):focus-visible{outline:2px solid var(--accent,#75baff);outline-offset:4px}
+@media(max-width:760px){
+ .product-hero{padding-top:48px;padding-bottom:48px}
+ .product-header{position:sticky}
+ .product-footer{padding-inline:20px}
+}
+@media(prefers-reduced-motion:reduce){
+ .back-brand img,.feature-grid article,.download-button{transition:none!important}
+ .back-brand:hover img,.feature-grid article:hover,.download-button:hover{transform:none}
+}
